@@ -1,0 +1,61 @@
+.hero_section {
+    height: 100vh;
+    background: url('../figures/landing-bg.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero_logo {
+    width: 50rem;
+}
+
+.hero_hline {
+    width: 60vw;
+    height: 0.2rem;
+    background-color: #000;
+    border-radius: 100px;
+}
+
+.hero_text {
+    font-size: 5rem;
+}
+
+.slide2 {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.slide2_ldiv {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 35%;
+}
+
+.slide2_txt {
+    font-size: 2rem;
+    text-align: justify;
+}
+
+.slide2_btn {
+    font-size: 2.5rem;
+    font-family: 'Oswald', sans-serif;
+    background-color: #5F2F76;
+    color: #fff;
+    padding: 0.5rem 4rem;
+    border: none;
+    border-radius: 0.8rem;
+}
+
+.slide2_rdiv {
+    max-width: 45%;
+}
+
+.slide2_img {
+    width: 100%;
+}
