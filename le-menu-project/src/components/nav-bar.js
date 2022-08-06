@@ -1,7 +1,7 @@
 import { memo } from 'react';
-import './nav-bar.css';
-import logo from './figures/logo-white.png';
-import navBtn from './figures/nav-btn.png';
+import '../stylesheets/nav-bar.css';
+import logo from '../figures/logo-white.png';
+import navBtn from '../figures/nav-btn.png';
 
 function Nav() {
     return (

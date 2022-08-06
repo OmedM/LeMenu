@@ -1,6 +1,6 @@
 import { memo } from 'react';
-import './footer.css';
-import logo from './figures/logo-white.png';
+import '../stylesheets/footer.css';
+import logo from '../figures/logo-white.png';
 
 function Footer() {
     return (
@@ -15,10 +15,10 @@ function Footer() {
                     <li><a href='https://www.figma.com/file/K7Wub7vHFySGFVxwrKzGA1/Untitled'>Design</a></li>
                 </ul>
             </div>
-            <div className='footer_copyright'><p>Omed Muhammed | 2022 | ⓒ</p></div>
             <div>
                 <img src={logo} className='footer_logo'/>
             </div>
+            <div className='footer_copyright'><p>Omed Muhammed | 2022 | ⓒ</p></div>
         </div>
     )
 }
