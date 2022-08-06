@@ -28,7 +28,7 @@ a {
     justify-content: space-around;
     height: 3.5rem;
     font-size: 1.3rem;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
 }

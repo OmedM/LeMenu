@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { Link } from 'react-router-dom';
 import '../stylesheets/footer.css';
 import logo from '../figures/logo-white.png';
 
@@ -7,12 +8,12 @@ function Footer() {
         <div className='footer_div'>
             <div>
                 <ul className='footer_items'>
-                    <li><a href='#'>Restaurants</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>Contact</a></li>
+                    <li><Link to="/restaurants">Restaurants</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
                     <hr className='hr'/>
-                    <li><a href='https://github.com/OmedM/LeMenu'>Source Code</a></li>
-                    <li><a href='https://www.figma.com/file/K7Wub7vHFySGFVxwrKzGA1/Untitled'>Design</a></li>
+                    <li><a href='https://github.com/OmedM/LeMenu' target='_Blank'>Source Code</a></li>
+                    <li><a href='https://www.figma.com/file/K7Wub7vHFySGFVxwrKzGA1/Untitled' target='_Blank'>Design</a></li>
                 </ul>
             </div>
             <div>
