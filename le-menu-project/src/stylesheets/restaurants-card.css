@@ -1,0 +1,22 @@
+.card {
+    height: 15rem;
+    width: 60%;
+    margin: 0rem 5rem;
+    box-shadow: 0px 0px 50px -8px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    display: flex;
+    
+}
+
+.card_ldiv {
+    height: 100%;
+}
+
+.card_img {
+    z-index: -100;
+    height: 100%;
+}
+
+.card_rdiv {
+
+}

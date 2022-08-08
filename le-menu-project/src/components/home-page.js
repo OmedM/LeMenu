@@ -20,6 +20,10 @@ function Home() {
                     <img src={slide2_img} className='slide2_img'/>
                 </div>
             </div>
+            <div className='slide3'>
+                <h1 className='slide3_header'>Add your restaurant's menu now!</h1>
+                <p className='slide3_txt'>Easily add your restaurant menu,<br/> so everyone can handson your menu with all your amazing dishes</p>
+            </div>
         </>
     )
 }

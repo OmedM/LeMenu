@@ -9,7 +9,7 @@
 }
 
 .hero_logo {
-    width: 50rem;
+    width: 30%;
 }
 
 .hero_hline {
@@ -24,10 +24,12 @@
 }
 
 .slide2 {
-    height: 90vh;
+    height: 70vh;
+    padding-top: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(212,174,231,1) 100%);
 }
 
 .slide2_ldiv {
@@ -53,9 +55,32 @@
 }
 
 .slide2_rdiv {
-    max-width: 45%;
+    max-width: 40rem;
 }
 
 .slide2_img {
     width: 100%;
+}
+
+.slide3 {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    background: url('../figures/slide3-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 90%;
+    padding: 15rem 0rem;
+}
+
+.slide3_header {
+    font-size: 4vw;
+}
+
+.slide3_txt {
+    font-size: 1.5vw;
+    text-align: center;
 }

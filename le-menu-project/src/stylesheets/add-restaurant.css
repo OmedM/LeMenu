@@ -1,0 +1,11 @@
+.add_restaurant_main_section {
+    margin-top: 10rem;
+    height: 100vh;
+    max-width: 70vw;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    font-size: 2rem;
+}

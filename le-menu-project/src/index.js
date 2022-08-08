@@ -7,6 +7,7 @@ import Home from './components/home-page.js';
 import Restaurants from './components/restaurants-page.js'
 import About from './components/about-page.js';
 import Contact from './components/contact-page.js'
+import AddRestaurant from './components/add-restaurant.js';
 
 function App() {
   return (
@@ -15,8 +16,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/restaurants" element={<Restaurants />}/>
+        <Route path="/add-restaurants" element={<AddRestaurant />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />}/>
+        <Route path='/add-restaurant' element={<AddRestaurant />}/>
       </Routes>
       <Footer />
     </BrowserRouter>
