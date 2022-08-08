@@ -1,9 +1,20 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../stylesheets/add-restaurant.css'
 
 function AddRestaurant() {
-    const [menuField, setMenuField] = useState();
+    const [menuField, setMenuField] = useState([{dishName: ''}]);
 
+    const handleInputChange = (e, index) => {
+        const {name, value} = e.target;
+        const list = [...menuField];
+        list[index][name] = value;
+        setMenuField(list);
+    }
+
+    const addNewField = () => {
+        setMenuField([...menuField, {dishName: ''}]);
+    }
+    
     return (
         <div className='add_restaurant_main_section'>
             <form>
@@ -24,18 +35,21 @@ function AddRestaurant() {
                 <hr/>
 
                 <h1>Menu</h1>
-                <label>Dish Name
-                    <input
-                    />
-                </label>
-                <label>Dish Price:
-                    <input
-                    /> $<br/>
-                </label>
-                <button>+</button>
+                {
+                    menuField.map((x, i) => {
+                        return (
+                            <>
+                                <input onChange={e => handleInputChange(e, i)}/>
+                            </> 
+                        )
+                    })
+                }
+                <button
+                onClick={addNewField}
+                >+</button>
             </form>
         </div>
     )
 }
 
-export default AddRestaurant
+export default AddRestaurant;
