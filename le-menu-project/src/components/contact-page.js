@@ -22,8 +22,8 @@ function Contact() {
             <div className='contact_vline'></div>
             <div className='contact_rdiv'>
                 <div className='contact_details_section'>
-                    <img src={phoneImg} className='contact_img1'/><p className='contact_txt'>00-xxx-xxxxxxxxxx</p>
-                    <img src={locationImg} className='contact_img2'/><p className='contact_txt'>UAE, Dubai</p>
+                    <img src={phoneImg} className='contact_img1'/><p className='contact_txt'>00-XXX-XXXXXXXXXX</p>
+                    <img src={locationImg} className='contact_img2'/><p className='contact_txt'>Kurdistan, Hawler</p>
                     <img src={hourImg} className='contact_img3'/><p className='contact_txt'>09:00 to 05:00, Sunday to Thursday</p>
                 </div>
                 <div className='contact_logo_section'>

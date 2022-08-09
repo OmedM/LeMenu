@@ -4,10 +4,12 @@ import ReactDOM from 'react-dom/client';
 import Nav from './components/nav-bar.js';
 import Footer from './components/footer.js';
 import Home from './components/home-page.js';
-import Restaurants from './components/restaurants-page.js'
+import Restaurants from './components/restaurants-page.js';
 import About from './components/about-page.js';
 import Contact from './components/contact-page.js'
 import AddRestaurant from './components/add-restaurant.js';
+import SingleRestaurant from './components/single-restaurant-page.js';
+import Error from './components/error.js';
 
 function App() {
   return (
@@ -16,10 +18,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/restaurants" element={<Restaurants />}/>
-        <Route path="/add-restaurants" element={<AddRestaurant />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />}/>
         <Route path='/add-restaurant' element={<AddRestaurant />}/>
+        <Route path="/restaurants/:id" element={<SingleRestaurant />}/>
+
+        <Route path="*" element={<Error />}/>
       </Routes>
       <Footer />
     </BrowserRouter>

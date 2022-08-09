@@ -24,20 +24,16 @@ const restaurants = [
 ];
 
 function Restaurants() {
-    return (
-        <>
-        
-        <Link to='/add-restaurant'>
-            <button className='add_btn'>
-                Add Restaurant
-            </button>
-        </Link>
-        
-            <div className='main_section'>            
-                {restaurants.map((restaurant) => <Card restaurant={restaurant}/>)}
+    return (      
+            <div className='main_section'>  
+                <Link to='/add-restaurant'>
+                    <button className='add_btn'>
+                        Add Restaurant
+                    </button>
+                </Link>
+
+            {restaurants.map((restaurant) => <Card restaurant={restaurant}/>)}
             </div>
-        </>
-        
     )
 }
 

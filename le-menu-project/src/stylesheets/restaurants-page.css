@@ -1,7 +1,7 @@
 .main_section {
     height: 100vh;
     width: 100vw;
-    padding-top: 10rem;
+    padding-top: 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,8 +9,12 @@
 }
 
 .add_btn {
-    color: #000;
-    margin: 10rem;
-    height: 200px;
-    width: 200px;
+    width: 25rem;
+    margin: 4rem 0;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #5F2F76;
+    border: none;
+    border-radius: 0.4rem;
 }
