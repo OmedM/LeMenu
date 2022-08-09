@@ -1,0 +1,20 @@
+.single_restaurant_main_section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.single_r_header {
+
+}
+
+.single_r_description {
+
+}
+
+.single_r_hline {
+    height: 0.1rem;
+    width: 60vw;
+    background-color: #000;
+}
