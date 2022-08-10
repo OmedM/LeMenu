@@ -6,7 +6,7 @@ import logo from '../figures/logo-white.png';
 function Footer() {
     return (
         <div className='footer_div'>
-            <div>
+            <div className='footer_items_div'>
                 <ul className='footer_items'>
                     <li><Link to="/restaurants">Restaurants</Link></li>
                     <li><Link to="/about">About</Link></li>
@@ -16,10 +16,8 @@ function Footer() {
                     <li><a href='https://www.figma.com/file/K7Wub7vHFySGFVxwrKzGA1/Untitled' target='_Blank'>Design</a></li>
                 </ul>
             </div>
-            <div>
-                <img src={logo} className='footer_logo'/>
-            </div>
-            <div className='footer_copyright'><p>Omed Muhammed | 2022 | ⓒ</p></div>
+            <img src={logo} className='footer_logo'/>
+            <div className='footer_copyright'>Omed Muhammed | 2022 | ⓒ</div>
         </div>
     )
 }

@@ -1,36 +1,33 @@
 import React, { useState } from 'react';
-import '../stylesheets/add-restaurant.css'
+import '../stylesheets/add-restaurant.css';
+import restaurantsData from '../data/restaurants.json';
 
 function AddRestaurant() {
-    const [value, setValue] = useState({
-        restaurantName: '',
-        restaurantDescription: '',
-        restaurantImage: ''
-    });
+    const [inputs, setInputs] = useState({});
 
-    const handleNameInputChange = (event) => {
-        setValue({...value, restaurantName: event.target.value})
+    const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
     }
 
-    const handleDescriptionInputChange = (event) => {
-        setValue({...value, restaurantDescription: event.target.value})
-    }
-
-    const handleImageInputChange = (event) => {
-        setValue({...value, restaurantImage: event.target.value})
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        JSON.parse(inputs);
     }
 
     return (
         <div className='add_restaurant_main_section'>
             <h1>Fill your restaurant's info</h1>
-            <form className='form'>
+            <form className='form' onSubmit={handleSubmit}>
                 <div className='form_input_div'>
                     <label className='form_label'>Restaurant Name:
                         <input
                         className='form_input'
                         type="text"
-                        value={value.restaurantName}
-                        onChange={handleNameInputChange}
+                        name="restaurantName"
+                        value={inputs.restaurantName || ""}
+                        onChange={handleChange}
                         required
                         />
                     </label>
@@ -38,10 +35,11 @@ function AddRestaurant() {
                 <div className='form_input_div'>
                     <label className='form_label'>Restaurant description:
                         <input
-                        className='form_input'
+                        className="form_input"
                         type="text"
-                        value={value.restaurantDescription}
-                        onChange={handleDescriptionInputChange}
+                        name="restaurantDescription"
+                        value={inputs.restaurantDescription || ""}
+                        onChange={handleChange}
                         />
                     </label>
                 </div>
@@ -50,15 +48,16 @@ function AddRestaurant() {
                         <input
                         className='form_input'
                         type="text"
-                        value={value.restaurantImage}
-                        onChange={handleImageInputChange}
+                        name="restaurantImage"
+                        value={inputs.restaurantImage || ""}
+                        onChange={handleChange}
                         required
                         />
                     </label>
                 </div>
                 <hr/>
                 <h1>Menu</h1>
-                <button type='submit' className='form_submit_btn'>Submit</button>
+                <input type="submit" className='form_submit_btn'/>
             </form>
         </div>
     )

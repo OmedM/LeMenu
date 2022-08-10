@@ -2,7 +2,6 @@ import { memo } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import '../stylesheets/restaurants-page.css'
 import Card from '../components/restaurants-card.js';
-import AddRestaurant from '../components/add-restaurant.js';
 import restaurantsData from '../data/restaurants.json';
 
 function Restaurants() {
