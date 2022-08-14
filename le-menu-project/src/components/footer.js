@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import '../stylesheets/footer.css';
 import logo from '../figures/logo-white.png';

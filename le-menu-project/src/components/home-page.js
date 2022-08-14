@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import '../stylesheets/home-page.css';
 import logo from '../figures/logo.png';
 import slide2_img from '../figures/slide2-img.jpeg'

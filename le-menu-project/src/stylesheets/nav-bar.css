@@ -31,6 +31,7 @@ a {
     position: fixed;
     width: 100%;
     top: 0;
+    z-index: 999;
 }
 
 .nav_logo {
@@ -45,12 +46,7 @@ a {
 }
 
 .nav_btn_div {
-    height: 3.5rem;
     display: none;
-}
-
-.nav_btn {
-    height: 2.5rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -61,7 +57,6 @@ a {
         padding: 0rem 0.8rem;
         height: 3.5rem;
         font-size: 1.3rem;
-        
     }
 
     .nav_btn_div {
@@ -69,6 +64,12 @@ a {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100%;
+      width: 3.5rem;
     }
     
     .nav_items {
@@ -86,6 +87,37 @@ a {
         width: 100vw;
         background: #5F2F76;
         flex-direction: column;
-        transform: translateX(100%);
+        clip-path: circle(10px at 100% -10%);
+        -webkit-clip-path: circle(10px at 100% -10%);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav_items.open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+        position: fixed;
+        font-size: 2.5rem;
+        padding: 0;
+        padding-bottom: 7rem;
+        top: 3.5rem;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        background: #5F2F76;
+        flex-direction: column;
+        clip-path: circle(150vh at 50% 50%);
+        -webkit-clip-path: circle(150vh at 50% 50%);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav_btn_line {
+        width: 2rem;
+        height: 0.1rem;
+        margin: 0.2rem;
+        border: none;
+        border-radius: 100000rem;
+        background-color: #fff;
     }
 }

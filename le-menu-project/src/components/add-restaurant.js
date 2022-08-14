@@ -1,66 +1,72 @@
-import React, { useState } from 'react';
+import React, { memo, useState} from 'react';
 import '../stylesheets/add-restaurant.css';
-import restaurantsData from '../data/restaurants.json';
+import { useDispatch, useSelector } from 'react-redux';
+import { menuActions } from '../redux/menu-slice.js';
+import menuSlice from '../redux/menu-slice.js';
 
 function AddRestaurant() {
-    const [inputs, setInputs] = useState({});
+    const [data, setData] = useState({
+        name: '',
+        description: '',
+        url: ''
+    });
 
+    const menuList = useSelector((state) => state.menu.menuList);
+    
     const handleChange = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setInputs(values => ({...values, [name]: value}))
+        setData(values => ({...values, [name]: value}))
+        console.log(data);
     }
+    const dispatch = useDispatch();
+    console.log(data);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        JSON.parse(inputs);
+    const name = 'abc';
+    const description = '$$$$$$$$$$$$';
+    const url = '#';
+
+    const handleSubmit = () => {
+        dispatch(menuActions.addMenu({
+            name,
+            description,
+            url
+        }));
+        console.log(menuList);
+        alert('done');
     }
-
     return (
         <div className='add_restaurant_main_section'>
             <h1>Fill your restaurant's info</h1>
             <form className='form' onSubmit={handleSubmit}>
-                <div className='form_input_div'>
-                    <label className='form_label'>Restaurant Name:
-                        <input
-                        className='form_input'
-                        type="text"
-                        name="restaurantName"
-                        value={inputs.restaurantName || ""}
-                        onChange={handleChange}
-                        required
-                        />
-                    </label>
-                </div>
-                <div className='form_input_div'>
-                    <label className='form_label'>Restaurant description:
-                        <input
-                        className="form_input"
-                        type="text"
-                        name="restaurantDescription"
-                        value={inputs.restaurantDescription || ""}
-                        onChange={handleChange}
-                        />
-                    </label>
-                </div>
-                <div className='form_input_div'>
-                    <label className='form_label'>Image URL:
-                        <input
-                        className='form_input'
-                        type="text"
-                        name="restaurantImage"
-                        value={inputs.restaurantImage || ""}
-                        onChange={handleChange}
-                        required
-                        />
-                    </label>
-                </div>
-                <hr/>
-                <h1>Menu</h1>
-                <input type="submit" className='form_submit_btn'/>
+                <label>Name:
+                    <input
+                    type='text'
+                    name='name'
+                    value={data.name || ''}
+                    onChange={handleChange}
+                    />
+                </label>
+                <label>description:
+                    <input
+                    type='text'
+                    name='description'
+                    value={data.description || ''}
+                    onChange={handleChange}
+                    />
+                </label>
+                <label>url:
+                    <input
+                    type='text'
+                    name='url'
+                    value={data.url || ''}
+                    onChange={handleChange}
+                    />
+                </label>
+                <button type='submit'>Submit</button>
             </form>
         </div>
     )
 }
 
-export default AddRestaurant;
+export default memo(AddRestaurant);

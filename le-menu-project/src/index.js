@@ -10,23 +10,26 @@ import Contact from './components/contact-page.js'
 import AddRestaurant from './components/add-restaurant.js';
 import SingleRestaurant from './components/single-restaurant-page.js';
 import Error from './components/error.js';
+import { Provider } from 'react-redux';
+import store from './redux/store.js';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/restaurants" element={<Restaurants />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/contact" element={<Contact />}/>
-        <Route path='/add-restaurant' element={<AddRestaurant />}/>
-        <Route path="/restaurants/:id" element={<SingleRestaurant />}/>
-
-        <Route path="*" element={<Error />}/>
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/restaurants" element={<Restaurants />}/>
+          <Route path='/add-restaurant' element={<AddRestaurant />}/>
+          <Route path="/restaurants/:id" element={<SingleRestaurant />}/>
+          <Route path="*" element={<Error />}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </Provider>
   )
 }
 

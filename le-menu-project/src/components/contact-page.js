@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import React, { memo } from 'react';
 import '../stylesheets/contact-page.css';
 import facebookLogo from '../figures/contact-facebook.png';
 import instagramLogo from '../figures/contact-instagram.png';
