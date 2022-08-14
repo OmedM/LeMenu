@@ -2,6 +2,7 @@ import React, { memo } from 'react';
 import '../stylesheets/home-page.css';
 import logo from '../figures/logo.png';
 import slide2_img from '../figures/slide2-img.jpeg'
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -14,7 +15,9 @@ function Home() {
             <div className='slide2'>
                 <div className='slide2_ldiv'>
                     <p className='slide2_txt'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque mattis pellentesque nulla, eu dignissim tellus interdum eu. Etiam cursus id felis id auctor. Aenean dictum malesuada enim ac volutpat. Suspendisse vehicula eleifend felis. Quisque ullamcorper tristique ullamcorper.</p>
-                    <button type='button' className='slide2_btn'>Go to menus now</button>
+                    <Link to='/restaurants'>
+                        <button type='button' className='slide2_btn'>Go to menus now!</button>
+                    </Link>
                 </div>
                 <div className='slide2_rdiv'>
                     <img src={slide2_img} className='slide2_img'/>
