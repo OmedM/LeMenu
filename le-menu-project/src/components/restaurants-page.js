@@ -8,17 +8,23 @@ function Restaurants() {
     const menus = useSelector((state) => state.menu.menuList);
     
     return (      
-            <div className='main_section'>  
+        <div className='main_section'>
+            <div>
                 <Link to='/add-restaurant'>
                     <button className='add_btn'>
                         Add new restaurant
                     </button>
                 </Link>
-
-            {menus && menus.map((menu) => (
-                <Card restaurant={menu}/>
-            ))}
             </div>
+
+            {
+                menus && menus.map(
+                    (menu) => (
+                        <Card restaurant={menu}/>
+                    )
+                )
+            }
+        </div>
     )
 }
 
